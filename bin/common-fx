@@ -1,0 +1,7 @@
+##
+## FUNCTIONS
+##
+logmsg() {
+   echo $(date +'%Y.%m.%d %T') $1 2>&1 |tee -a $SCRIPT_LOG
+}
+
