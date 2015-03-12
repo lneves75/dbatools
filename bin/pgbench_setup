@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# This script will prepare a database for load tests
 CONN_STR="-U app -h dbmaster"
 
 psql $CONN_STR -c "drop database if exists dh_live_backend" postgres
