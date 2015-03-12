@@ -5,4 +5,6 @@ CONN_STR="-U app -h dbmaster"
 
 psql $CONN_STR -c "drop database if exists dh_live_backend" postgres
 psql $CONN_STR -c "create database dh_live_backend with owner app" postgres
+
+# Load the database with initial data
 pgbench $CONN_STR -i -s 10 dh_live_backend
